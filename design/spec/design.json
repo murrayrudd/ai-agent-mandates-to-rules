@@ -1,0 +1,184 @@
+{
+  "version": "1.0.1",
+  "status": "precollection_design",
+  "horizon": 12,
+  "currency": "USD",
+  "utility_unit": "cent",
+  "score_integer_unit": "one hundredth of one cent",
+  "fee_input_unit": "tenth of a cent",
+  "reserve_risk_input_unit": "basis point",
+  "purchase": {
+    "service_price_c": 100,
+    "available_c": 2500,
+    "reserve_c": 2000,
+    "price_plus_fee_limit_c": 130,
+    "non_delivery_probability": "0.01",
+    "delivery_probability": "0.99",
+    "reserve_loss_c": 1000,
+    "lock_hours": 24,
+    "opportunity_cost_on_lock_c": 0,
+    "decline_value_c": 0,
+    "independent_funding": true
+  },
+  "levels": {
+    "fee_tenths_c": [
+      1,
+      2,
+      10,
+      12,
+      20,
+      51,
+      91,
+      111,
+      250
+    ],
+    "reserve_loss_bp": [
+      1,
+      10,
+      100
+    ],
+    "refund_if_nondelivery_c": [
+      0,
+      50,
+      100
+    ],
+    "key_authority": [
+      "provider",
+      "operator"
+    ],
+    "disclosure": [
+      "transaction",
+      "persistent",
+      "legal"
+    ]
+  },
+  "operators": {
+    "service_value_conditional_on_delivery_c": 112,
+    "disclosure_costs_c": {
+      "transaction": 0,
+      "persistent": 2,
+      "legal": 6
+    },
+    "control_premium_c": {
+      "O1": 2,
+      "O2": 10
+    },
+    "pooled_weight": {
+      "O1": "0.5",
+      "O2": "0.5"
+    },
+    "scope": "one operator, one service, one 12-purchase sequence",
+    "tie_rule": "If DECLINE is optimal, select it. Among tied purchase offers choose the smaller canonical offer ID in ASCII order. All optimal actions have zero loss."
+  },
+  "decision_rights": {
+    "REVIEW_ALL": "deterministic operator decides each opportunity",
+    "STANDING": "LLM acts under common mandate",
+    "CASE": "after common trigger only case rulings",
+    "RULE": "same triggering choice, then one numeric clause available from the next period",
+    "UPFRONT": "secondary standing mandate containing the identical numeric clause from period 1"
+  },
+  "recurrence": {
+    "low": 1,
+    "high": 6,
+    "matched_replacement": "only the higher-fee offer changes from provider-held to operator-held",
+    "initial_focal_period": "2 for odd family number, 3 for even",
+    "signal": "period and total horizon; recurrence label and future offers withheld"
+  },
+  "sampling": {
+    "pilot_families": 2,
+    "precision_families": 16,
+    "main_reserve_families": 128,
+    "main_minimum": 24,
+    "main_round_up_multiple": 4,
+    "one_model_repetition_per_family": true,
+    "sequence_seed": "Rudd-P3-sequence-1.0.0",
+    "partition_salt": "Rudd-P3-unordered-financial-root-1.0.0",
+    "design_replications": "one first attempt per scheduled private decision; shared CASE/RULE prefix recorded once",
+    "bootstrap_repetitions": 5000,
+    "bootstrap_seed": 20261119,
+    "half_width_loss_c": 2,
+    "half_width_review_count": "0.5",
+    "preliminary_size_t975_df14": "2.14479"
+  },
+  "collection": {
+    "target_model": "openai/gpt-6.2-sol-20261117",
+    "upstream": "OpenAI",
+    "routing": "OpenRouter; single provider, pinned snapshot, no fallback",
+    "reasoning_effort": "medium",
+    "max_output_tokens_including_reasoning": 8192,
+    "sampling": "provider default, record resolved settings if supplied",
+    "first_attempts_only": true,
+    "experimental_tools": false,
+    "prior_conversation": false,
+    "concurrent_pilot_requests_max": 1,
+    "qualification_calls": 8,
+    "pilot_full_purchase_limit": 364,
+    "pilot_core_purchase_limit": 268,
+    "total_pilot_including_upfront_limit": 372,
+    "proposed_pilot_usd_stop": 3,
+    "precision_and_main_spend_authorized": false,
+    "pilot_spending_checkpoint_after_period": 3,
+    "main_batch_endpoints": [
+      24,
+      48
+    ],
+    "request_model": "openai/gpt-6.2-sol",
+    "openrouter_endpoint_name": "OpenAI | openai/gpt-6.2-sol-20261117",
+    "openrouter_provider_tag": "openai"
+  },
+  "cost_scenarios": {
+    "review_c_display": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      25,
+      50,
+      100
+    ],
+    "review_domain": "all c >= 0",
+    "incremental_referral_setup_c": [
+      0,
+      5,
+      25
+    ],
+    "clause_drafting_c": [
+      0,
+      2,
+      10,
+      25,
+      50
+    ],
+    "exception_to_routine_review_cost_ratio": [
+      0.5,
+      1,
+      2
+    ],
+    "upfront_to_later_clause_cost_ratio": [
+      0.5,
+      1,
+      2
+    ],
+    "reference": {
+      "incremental_referral_setup_c": 0,
+      "exception_to_routine_review_cost_ratio": 1,
+      "upfront_to_later_clause_cost_ratio": 1
+    }
+  },
+  "analysis": {
+    "primary_population": "all assigned matched families with complete family reporting; technical failures execute separate NO_EXECUTION outside outcome",
+    "paired_behavioral_sensitivity": "complete core families; upfront comparisons use matched full families with valid upfront branch",
+    "alpha_interval": "pointwise 95%",
+    "fixed_profile_sensitivity_control_c": [
+      0,
+      5,
+      15
+    ],
+    "fixed_profile_sensitivity_service_c": [
+      106,
+      118
+    ],
+    "positive_loss_cutoff_for_materiality_c": 2
+  }
+}

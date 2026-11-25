@@ -1,0 +1,6 @@
+Governance arrangement,Who decides the current purchase?,What guidance applies to later purchases?
+Full operator approval,The simulated operator selects an offer or declines at every opportunity.,The operator reviews each new opportunity.
+Mandate-only delegation,The agent selects an offer or declines without referral.,The original mandate leaves the value of retaining control unspecified.
+Referral with case ruling,"The agent decides or refers. On referral, the operator chooses.",Each ruling expires after that purchase. The original mandate continues.
+Referral with reusable rule,The agent decides or refers. The operator settles each referred purchase.,"The first qualifying referral also adds a numeric rule to the mandate, effective from the next purchase."
+Delegation with advance rule,The agent selects an offer or declines without referral.,The same numeric rule is in the mandate before the first purchase and applies throughout.

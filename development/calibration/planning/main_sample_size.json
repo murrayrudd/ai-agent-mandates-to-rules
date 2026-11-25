@@ -1,0 +1,48 @@
+{
+  "planning_families": 16,
+  "odd": 8,
+  "even": 8,
+  "within_parity_df": 14,
+  "multiplier": 2.14479,
+  "contrasts_and_outcomes": 52,
+  "largest_unrounded_requirement": 16.790350444622497,
+  "largest_requirement_rounded_up_to_integer": 17,
+  "design_minimum": 24,
+  "rounding_multiple": 4,
+  "indicated_main_families": 24,
+  "within_existing_reserve": true,
+  "binding_contrasts": [
+    {
+      "contrast_id": "O2/high/REVIEW_ALL minus STANDING/loss_cents",
+      "comparison": "REVIEW_ALL minus STANDING",
+      "operator": "O2",
+      "recurrence": "high",
+      "outcome": "loss_cents",
+      "families": 16,
+      "df": 14,
+      "mean_family_difference": -8.18125,
+      "pooled_within_parity_variance": 14.599910714285715,
+      "pooled_within_parity_sd": 3.8209829513209965,
+      "target_halfwidth": 2.0,
+      "unrounded_required_families": 16.790350444622497,
+      "required_families_ceiling": 17
+    }
+  ],
+  "planned_halfwidths": [
+    {
+      "main_families": 24,
+      "largest_planning_halfwidth_loss_cents": 1.6728394246820035,
+      "largest_planning_halfwidth_review_count": 0.3653570106798305
+    },
+    {
+      "main_families": 48,
+      "largest_planning_halfwidth_loss_cents": 1.1828761010288473,
+      "largest_planning_halfwidth_review_count": 0.258346419805754
+    },
+    {
+      "main_families": 128,
+      "largest_planning_halfwidth_loss_cents": 0.72436071911338,
+      "largest_planning_halfwidth_review_count": 0.15820422634973783
+    }
+  ]
+}

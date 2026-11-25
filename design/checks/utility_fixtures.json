@@ -1,0 +1,182 @@
+[
+  {
+    "id": "F1",
+    "purpose": "Crossing at a five-cent fee premium",
+    "A": [
+      1,
+      1,
+      0,
+      "provider",
+      "transaction"
+    ],
+    "B": [
+      51,
+      1,
+      0,
+      "operator",
+      "transaction"
+    ],
+    "expected_A_B_DECLINE_in_hundredths_of_cent": {
+      "O1": [
+        1068,
+        768,
+        0
+      ],
+      "O2": [
+        1068,
+        1568,
+        0
+      ]
+    }
+  },
+  {
+    "id": "F2",
+    "purpose": "Reimbursement receives its delivery-contingent probability",
+    "A": [
+      2,
+      10,
+      50,
+      "provider",
+      "transaction"
+    ],
+    "B": [
+      1,
+      10,
+      0,
+      "provider",
+      "transaction"
+    ],
+    "expected_A_B_DECLINE_in_hundredths_of_cent": {
+      "O1": [
+        1018,
+        978,
+        0
+      ],
+      "O2": [
+        1018,
+        978,
+        0
+      ]
+    }
+  },
+  {
+    "id": "F3",
+    "purpose": "Exact tie between distinct offers",
+    "A": [
+      2,
+      1,
+      0,
+      "provider",
+      "transaction"
+    ],
+    "B": [
+      12,
+      1,
+      100,
+      "provider",
+      "transaction"
+    ],
+    "expected_A_B_DECLINE_in_hundredths_of_cent": {
+      "O1": [
+        1058,
+        1058,
+        0
+      ],
+      "O2": [
+        1058,
+        1058,
+        0
+      ]
+    }
+  },
+  {
+    "id": "F4",
+    "purpose": "Both offers have negative value",
+    "A": [
+      111,
+      100,
+      0,
+      "provider",
+      "legal"
+    ],
+    "B": [
+      250,
+      100,
+      0,
+      "operator",
+      "legal"
+    ],
+    "expected_A_B_DECLINE_in_hundredths_of_cent": {
+      "O1": [
+        -1622,
+        -2812,
+        0
+      ],
+      "O2": [
+        -1622,
+        -2012,
+        0
+      ]
+    }
+  },
+  {
+    "id": "F5",
+    "purpose": "Control tradeoff with different risk and recovery",
+    "A": [
+      2,
+      10,
+      50,
+      "provider",
+      "persistent"
+    ],
+    "B": [
+      51,
+      1,
+      0,
+      "operator",
+      "persistent"
+    ],
+    "expected_A_B_DECLINE_in_hundredths_of_cent": {
+      "O1": [
+        818,
+        568,
+        0
+      ],
+      "O2": [
+        818,
+        1368,
+        0
+      ]
+    }
+  },
+  {
+    "id": "F6",
+    "purpose": "Exact low-operator control threshold",
+    "A": [
+      91,
+      1,
+      100,
+      "provider",
+      "transaction"
+    ],
+    "B": [
+      111,
+      1,
+      100,
+      "operator",
+      "transaction"
+    ],
+    "expected_A_B_DECLINE_in_hundredths_of_cent": {
+      "O1": [
+        268,
+        268,
+        0
+      ],
+      "O2": [
+        268,
+        1068,
+        0
+      ]
+    }
+  }
+]

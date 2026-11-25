@@ -1,0 +1,71 @@
+{
+  "pilot": {
+    "families": 2,
+    "sequence_rows": 48,
+    "distinct_physical_pairs": 34,
+    "distinct_economic_roots": 24,
+    "distinct_offer_profiles": 52,
+    "candidate_counts_by_cell": {
+      "anchor": 43,
+      "below": 39,
+      "interior": 43,
+      "above": 37,
+      "near": 25,
+      "transfer": 289,
+      "decline": 1359,
+      "tie": 19,
+      "risk": 117,
+      "recovery": 121,
+      "privacy": 119,
+      "mixed": 3419
+    },
+    "sequence_sha256": "d032f520625900e6e4f364344200968cd4bee8b534c302f4607026b8362efa77",
+    "offer_sha256": "770ea310284401c3d49a760b7d213267ec298c638af124a732ef940b3bf732d0"
+  },
+  "precision": {
+    "families": 16,
+    "sequence_rows": 384,
+    "distinct_physical_pairs": 236,
+    "distinct_economic_roots": 168,
+    "distinct_offer_profiles": 223,
+    "candidate_counts_by_cell": {
+      "anchor": 64,
+      "below": 46,
+      "interior": 64,
+      "above": 31,
+      "near": 18,
+      "transfer": 360,
+      "decline": 1753,
+      "tie": 17,
+      "risk": 168,
+      "recovery": 138,
+      "privacy": 140,
+      "mixed": 4136
+    },
+    "sequence_sha256": "17b006bce17f520d7630f57de14b61581e4ab41eda0cbf372af6f5027b3dbc7d",
+    "offer_sha256": "7a12213815cec86eb781124928ac8a6d9a36dfb2c4b27747e0a6922d8ad821e0"
+  },
+  "main": {
+    "families": 128,
+    "sequence_rows": 3072,
+    "distinct_physical_pairs": 1381,
+    "distinct_economic_roots": 1004,
+    "distinct_offer_profiles": 393,
+    "candidate_counts_by_cell": {
+      "anchor": 137,
+      "below": 79,
+      "interior": 137,
+      "above": 98,
+      "near": 45,
+      "transfer": 791,
+      "decline": 3887,
+      "tie": 33,
+      "risk": 337,
+      "recovery": 375,
+      "privacy": 338,
+      "mixed": 9367
+    },
+    "sequence_sha256": "15bbb13768a5601f9e3f700569cd300bf54651832cf080379804b0ea3086d59a",
+    "offer_sha256": "e3229531285d99e5db5b38df493f5dccffbf84827724a62cff5c7dddc1c61f56"
+  }
+}

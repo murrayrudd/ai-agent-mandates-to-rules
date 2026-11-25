@@ -1,0 +1,14 @@
+Purchase {period} of {horizon}
+
+{setting}
+
+Operator mandate
+{effective_mandate}
+
+Your authority
+{authority}
+
+Available offers
+{offers}
+
+Supply exactly these three string-valued fields: provisional, disposition, issue.

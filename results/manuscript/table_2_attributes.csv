@@ -1,0 +1,6 @@
+Offer attribute,Levels
+Nonrefundable fee,"0.1¢, 0.2¢, 1.0¢, 1.2¢, 2.0¢, 5.1¢, 9.1¢, 11.1¢, or 25.0¢"
+"Probability of a 1,000¢ reserve loss","0.01%, 0.1%, or 1%. The loss event is independent of seller delivery."
+Reimbursement for non-delivery,"0¢, 50¢, or 100¢, paid after 24 hours."
+Control of reserve keys,Operator-held or provider-held. Routine release time and costs are the same.
+Identity disclosure,"Transaction pseudonym, persistent pseudonym, or verified legal identity. All records last 30 days."

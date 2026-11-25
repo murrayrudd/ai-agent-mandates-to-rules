@@ -1,0 +1,104 @@
+{
+  "phase_order": [
+    "Offline checks and version lock",
+    "Exact route, quoted prices and budget preflight",
+    "Eight independent qualification calls",
+    "Two-family pilot",
+    "Independent precision calibration under a separate work authorization",
+    "Main freeze",
+    "Reserved main collection under a separate work authorization"
+  ],
+  "qualification": "8 fresh contexts, each containing qualification_system, setting, common mandate, both authority rules, feedback timing, and a single question/choices without its answer. Exact schema {\"answer\":\"A\"}, B or C accepted as the answer value. Require 8/8 for this version. Archive every attempt. Investigate a failure using development material. Reissue a new version for a substantive repair.",
+  "pilot_order": "Round-robin by period across family, recurrence, operator and available purchase policies; rotate by period and order deterministically as documented in pilot_dispatch.csv. Each parent commits before any child. No cross-arm reuse except the shared CASE/RULE parent. Operator-approval rows are deterministic projections, never API calls.",
+  "qualitative_attention": "Review uses operator attention; the model sees no numeric review price. All arms know period/12; no future choices or recurrence labels appear.",
+  "fiscal": "Proposed pilot-only stop is USD 3 or 372 paid first attempts, whichever comes first. No live work is authorized by this packet. Verify the current provider quote and availability before the first paid request. Reserve enough for actual input plus maximum billable output including reasoning, use one in-flight purchase, and reconcile actual charge before sending the next request. Include qualification requests. Unknown price, uncertain bill, missing exact endpoint, exhausted ceiling, or client interruption stops dispatch cleanly. A later resumption may continue verified undispatched IDs under the same release and ceiling.",
+  "idempotence": "Before sending, persist a unique attempt ID and pending state. Write the first reply/error exactly once. An ambiguous dispatched ID is never automatically resent; keep any observed failure distinct. Duplicate transport receipts must not duplicate economic entries or reviews. A terminal valid attempt projects once per scheduled policy-period. Credentials and authorization headers are excluded from scientific logs.",
+  "pilot_acceptance": [
+    "Eight objective qualification keys correct before purchase calls.",
+    "Static design tests pass before launch; every eligible trigger projects one immediate decision per child with identical offers; no state leakage or duplicate charges.",
+    "Review first attempts, parsing, routing and missingness. If more than 5% of dispatched purchase attempts are invalid or fail, or any arm exceeds 10%, diagnose instrument or transport on development data before the main freeze. Retain and report original records.",
+    "If the agent never triggers, always refers, or implements the clause poorly, keep the observation. A lack of triggered cases limits conditional estimation and leaves the all-assigned policy comparison available.",
+    "A change to the common mandate, feedback scope, populations, provider snapshot, scoring or eligibility produces a versioned amendment. Reserve a new disjoint bank if its cases or results informed the repair."
+  ],
+  "confirmation": "Main n and a live spend ceiling are fixed after calibration and before the first main call; exact budget and availability are launch facts, not asserted by this design.",
+  "provider": "Use the one purchasing model and dated OpenAI endpoint specified in design.json for qualification, pilot, precision calibration and all main blocks. The request_model field gives the routing model ID. The target_model field identifies the dated release in the OpenAI endpoint name. Pin the standard OpenAI route, disable fallbacks, use medium reasoning and allow 8,192 output tokens including reasoning. Record the model ID sent, returned ID, actual provider and timestamped endpoint metadata mapping the route to the dated target. Verify this mapping at preflight and each restart, and record any returned version or fingerprint. A response carrying the public model name requires corroborating route metadata. An unresolved or changed route pauses dispatch.",
+  "pilot_cost_checkpoint": {
+    "scope": "Budget revision 1, pilot only. Any approved limit below USD 3 takes precedence.",
+    "after_period": 3,
+    "qualification_plus_purchase_request_max_to_checkpoint": 84,
+    "trigger": "Both matched families have encountered their first scheduled custody choice by the end of period 3. Apply the spending stop from the first request.",
+    "calculation": "After period 3 reconcile cumulative charges including qualification. Add the number of remaining feasible purchase slots times the observed mean charge per purchase request. If the projection exceeds the applicable pilot ceiling, pause collection. An unresolved charge also pauses collection. Resume only with a reconciled affordable plan or an explicitly approved budget revision. Preserve the issued assignments and first attempts.",
+    "historical_basis": {
+      "source": "Paper 2 replication-v1.0.0.zip, main/runs/sol/responses/*.json. Sum raw_response.usage.cost on completed calls. Each returned request ID is unique.",
+      "publication": "https://github.com/murrayrudd/ai-agent-digital-payment-competition",
+      "quote": "https://openrouter.ai/openai/gpt-6.1-sol-20260929",
+      "snapshot_input_and_output_usd_per_million_listed_nov_19_2026": [
+        2,
+        10
+      ],
+      "completed": 531,
+      "provider_reported_usd": "1.523458",
+      "mean_usd_rounded": "0.002869",
+      "benchmark_through_checkpoint_usd_rounded": "0.24",
+      "benchmark_all_pilot_slots_usd_rounded": "1.07",
+      "unresolved_prior_attempts": 3,
+      "prior_accounted_usd_including_unconfirmed_reserves": "1.85810660",
+      "benchmark_all_slots_including_historical_reserves_usd_rounded": "1.29",
+      "interpretation": "These are projections from recorded Paper 2 Sol 6.1 usage. The listed input and output prices for the two standard routes match. Actual Paper 3 cost depends on Sol 6.2 token use and caching for the new prompts. The designs differ, so a change in the observed cost per call cannot be attributed solely to the model. Prior reserves have no confirmed charge.",
+      "historical_model": "openai/gpt-6.1-sol-20260929"
+    },
+    "token_and_cost_report": "Report actual billed USD and request count for qualification and purchases separately. At the scheduled checkpoint report mean USD per paid purchase request, mean input and output tokens, and cached input and reasoning tokens when supplied by the provider. Reasoning tokens are part of output. Use observed charges to reprice the remaining run."
+  },
+  "campaign_cost_scenarios": {
+    "units": "USD of model usage across qualification, instrument pilot, precision calibration and main collection",
+    "basis": "Maximum scheduled requests within each design, multiplied by the mean reported charge on 531 completed Paper 2 Sol 6.1 calls. Figures are conditional projections and exclude any additional development runs or unplanned repeats. The USD 3 pilot ceiling is a separate limit.",
+    "main_sample": "The independent precision calibration selects the main sample. The reserve contains 128 families. The core-only figures price an optional, prospectively declared deferral of the secondary upfront-clause comparison.",
+    "scenarios": [
+      {
+        "main_families": 24,
+        "all_stages_max_requests_with_upfront_clause": 6884,
+        "all_stages_usd_at_historical_mean_with_upfront_clause": "19.75",
+        "all_stages_max_requests_core_only_if_secondary_arm_deferred": 5636,
+        "all_stages_usd_at_historical_mean_core_only": "16.17"
+      },
+      {
+        "main_families": 48,
+        "all_stages_max_requests_with_upfront_clause": 11252,
+        "all_stages_usd_at_historical_mean_with_upfront_clause": "32.28",
+        "all_stages_max_requests_core_only_if_secondary_arm_deferred": 8852,
+        "all_stages_usd_at_historical_mean_core_only": "25.40"
+      },
+      {
+        "main_families": 128,
+        "all_stages_max_requests_with_upfront_clause": 25812,
+        "all_stages_usd_at_historical_mean_with_upfront_clause": "74.06",
+        "all_stages_max_requests_core_only_if_secondary_arm_deferred": 19572,
+        "all_stages_usd_at_historical_mean_core_only": "56.15"
+      }
+    ]
+  },
+  "main_batches": {
+    "dispatch_revision": "main-blocks-v1",
+    "final_sample": "Set the main sample size from the 16 independent calibration families before the first main response. Record the target, assignment list, inclusion of the upfront comparison, budget, release, model settings and hashes as one run manifest. All blocks read this same manifest.",
+    "boundaries": "Complete families M001–M024, then M025–M048 if in the frozen sample, then M049 through the frozen endpoint. Truncate the final block at the target. Each family completes both operator profiles, both recurrence conditions and all assigned policies for all 12 purchases. Interleave by period and hashed slot priority within each block.",
+    "first_block": "The first 24 are confirmatory observations and count once in the main analysis. At their completion, review the operational checkpoint. Family 48 is available as a second pause if the target is larger. If the target is 24 or 48, its final boundary closes the study.",
+    "quality_review": "Check expected and recorded IDs, missing or duplicate entries, pointer and hash consistency, parse and transport status, correct route and settings, branch and scoring invariants, recorded charges, and remaining budget. Report pass/fail and operational coverage. Mask choices, referral rates, welfare, policy rankings, effect estimates and significance until the selected sample is complete. Log the checkpoint, dates, and disposition.",
+    "durable_state": "Persist the frozen manifest and a durable journal of attempt IDs, raw responses or errors and charges, conditional slots skipped by design, and projected policy-period records. Record technical failures under the existing fallback. Close a block only when every assigned slot is accounted for, all policy-period records reconcile, and there are no unresolved dispatches. Commit completion after the journal is durable. Reverify the manifest and journal on resume.",
+    "resume": "At a block boundary start with the next family range. Within an interrupted block regenerate its exact schedule, restore referral and clause status from recorded events, and continue with the first eligible unsent slot. Reuse a recorded response if only its projection is missing. Reconcile any ambiguous sent request before advancing. New credentials may authenticate the same fixed configuration. Billing or authentication interruptions leave unattempted slots pending.",
+    "corrections": "Document operational fixes and apply any corrected scoring uniformly from retained first responses. If an error changed the inputs, model route, authority or choices, identify affected observations and version the remedy and its analysis before restarting. Retain original records and distinguish incompatible observations. A budget interruption is reported as incomplete collection if the frozen target is never reached."
+  },
+  "studied_model": {
+    "design_version": "1.0.1",
+    "model_release_date": "2026-11-17",
+    "source_checked_local_date": "2026-11-19",
+    "openai_model_documentation": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+    "openrouter_release_listing": "https://openrouter.ai/openai/gpt-6.2-sol-20261117",
+    "openrouter_endpoint_metadata": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol/endpoints",
+    "standard_openai_usd_per_million_short_request_tokens": {
+      "input": 2,
+      "output": 10,
+      "cached_input": 0.1
+    },
+    "model_scope": "All live agent decisions and qualification use Sol 6.2. The two operator profiles and full-approval benchmark use the programmed utility functions."
+  }
+}

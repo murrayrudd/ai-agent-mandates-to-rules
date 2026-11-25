@@ -1,0 +1,73 @@
+{
+  "version": "1.0.1",
+  "physical_unit": "one first-attempt model request",
+  "analysis_unit": "one projected 12-purchase policy sequence",
+  "family_unit": "the matched low and high sequences under both operators and every policy",
+  "stages": [
+    "qualification",
+    "pilot",
+    "precision",
+    "main"
+  ],
+  "eligible": "valid REFER with issue CONTROL and exactly one of the two offers carrying operator-held keys",
+  "economic_actions": [
+    "A",
+    "B",
+    "DECLINE"
+  ],
+  "outside_fallback": "NO_EXECUTION",
+  "non_execution_score": "0, reviews 0, new clause 0, existing state retained",
+  "review_all": "12 reviews, deterministic best feasible choice on each period, no model request",
+  "welfare": "L=sum(max(U_A,U_B,0)-U_executed) in cents by operator, family, recurrence and policy. U_NO_EXECUTION=0 under the operational fallback. Keep agent and technical declines distinct.",
+  "core_policies": [
+    "REVIEW_ALL",
+    "STANDING",
+    "CASE",
+    "RULE"
+  ],
+  "secondary_policy": "UPFRONT",
+  "contrast_sign": "For a benefit of switching from policy x to policy y, report L_x-L_y and N_x-N_y. Positive values are savings.",
+  "primary": [
+    {
+      "comparison": "All six unordered pairs of the four core policies",
+      "outcomes": [
+        "L",
+        "N"
+      ],
+      "strata": "separately by operator and recurrence",
+      "primary_set": "all assigned families, paired; include paths with no trigger"
+    },
+    {
+      "comparison": "((CASE-RULE)high - (CASE-RULE)low)",
+      "outcomes": [
+        "L",
+        "N"
+      ],
+      "strata": "separately by operator",
+      "primary_set": "all assigned families; zero carryover effect for a path without a qualifying referral"
+    }
+  ],
+  "secondary": [
+    "UPFRONT versus RULE and STANDING; identical numerical clause and scope, preparation charged once",
+    "immediate value = U_ruling-U_provisional on valid referrals",
+    "after the common first qualifying referral, cumulative future losses, review savings and rule cost",
+    "unreferred positive losses including losses of at least 2 cents; needless buys and missed purchases when outside action strictly differs in value",
+    "referrals with zero immediate gain, number of first triggers and cases with no future qualifying slots",
+    "transfer on novel multidimensional menus, neutral controls, decline and tie cases"
+  ],
+  "aggregation": "equal-weight families; report profiles individually, then pool with equal weights by design. For never-triggered families include the same physical path in CASE and RULE. Each shared event appears once in each projected path and once in the funded request ledger.",
+  "cost": "G=L+F+c*(N_routine+rho*N_exception)+d*M. Defaults rho=1 and identical common initial costs normalized to zero. REVIEW_ALL and STANDING have incremental F=0; CASE and RULE each have F=s; UPFRONT has F=eta*d. s=0 and eta=1 in the reference comparison. All figures are cents.",
+  "break_even": "Use mean K=L+F+d*M and mean effective reviews V=N_routine+rho*N_exception. If V1>V0 then c*=(K0-K1)/(V1-V0). Compute all nonnegative pairwise crossings and evaluate endpoints, open intervals and the unbounded last interval for the lower envelope. Equal slopes and equal intercepts tie; otherwise lower intercept wins. A negative crossing is outside the price domain.",
+  "reuse_payment": "Within each recurrence stratum report counts at risk. For triggered sequences compare cumulative CASE cost minus RULE cost at the trigger (zero later exposures) and after each subsequent focal purchase, summing all intervening periods including neutral purchases. Report final horizon too, first nonnegative crossing for each sequence with later value and a positive clause cost, later reversals and no crossing. A zero clause cost with equality at the trigger is labeled trivial. Untriggered paths enter unconditional effects with zero and are outside time-to-recovery descriptives.",
+  "uncertainty": "5,000 family-cluster bootstrap samples with seed 20261119. Resample independently within odd/even counterbalancing blocks and retain all related outcomes. Report pointwise percentile 95% intervals for paired differences and net cost differences at scenario prices. Treat a denominator interval containing zero as an unstable ratio; show cost-difference intervals and do not force a finite ratio range. The interval covers Monte Carlo variation over design families and the single model configuration.",
+  "coverage": "Operational primary uses every assigned complete run including technical nonexecution. Report all attempted/missing/invalid calls and lost paired families. Behavioral companion uses fully valid families for the four core policies; comparisons to UPFRONT additionally require that branch to be valid. An unfinished family due to an interrupted dispatch is incomplete and must never be recoded as a sequence of observed declines.",
+  "size": "Use D001-D016 only for variance planning, independent of pilot and main. For each primary contrast and stratum and each of L,N, let s be the pooled within-parity SD of the 16 family differences (14 df). n=ceil(max((2.14479*s/h)^2)) over contrasts and both endpoints, h=2 cents or 0.5 review. Use the larger of 24 and n, round upwards to a multiple of four. Use all 16 complete assigned calibration families, eight per parity block. Complete a pending assigned family before planning the sample. If an assigned family cannot be completed, document a replacement in the same block from an independent development bank under an amendment, or report feasibility only. Use M001..Mnnn in fixed order. If n>128, revise precision or extend untouched reserve before main collection, or stop at feasibility. No sequential main-outcome stopping.",
+  "interpretation": "Known and stable synthetic preferences; review prices imposed in analysis. Human WTP, measured review time, real purchasing frequencies and strategic responses to a posted review price require separate evidence. A transfer effect jointly reflects numerical content, its retention and authorization.",
+  "planned_displays": [
+    "operator × recurrence × policy table of L, N, M, coverage and pairwise differences",
+    "least-cost policy over review cost and clause cost with ties/dominance",
+    "immediate correction and cumulative value after return of a custody tradeoff",
+    "control, technical failures and transfer diagnostics with denominators"
+  ],
+  "main_checkpoint": "Include validly collected families from the first block in the frozen main sample. Review operational integrity after M024 and at later pauses. Keep comparative outcomes masked and the independent calibration target fixed through collection. Identify any premature administrative end and report the achieved sample and reason."
+}

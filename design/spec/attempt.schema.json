@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "First paid purchase-attempt record",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "attempt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage": {
+      "enum": [
+        "pilot",
+        "precision",
+        "main"
+      ]
+    },
+    "family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_code": {
+      "enum": [
+        "O1",
+        "O2"
+      ]
+    },
+    "recurrence": {
+      "enum": [
+        "low",
+        "high"
+      ]
+    },
+    "period": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "state_before": {
+      "enum": [
+        "STANDING",
+        "UPFRONT",
+        "SHARED",
+        "CASE",
+        "RULE"
+      ]
+    },
+    "model_snapshot": {
+      "type": "string",
+      "minLength": 1
+    },
+    "upstream": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "provider_request_id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "inference_config_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "design_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "menu_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "economic_root": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "offer_A": {
+      "type": "string",
+      "minLength": 1
+    },
+    "offer_B": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorized_clause_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "messages_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "raw_request_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "raw_response_or_error_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "raw_response_or_error_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "request_started_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "VALID",
+        "TRANSPORT_ERROR",
+        "FORMAT_ERROR",
+        "AUTHORITY_ERROR",
+        "ROUTE_ERROR"
+      ]
+    },
+    "in_tokens": {
+      "type": [
+        "null",
+        "integer"
+      ],
+      "minimum": 0
+    },
+    "out_tokens": {
+      "type": [
+        "null",
+        "integer"
+      ],
+      "minimum": 0
+    },
+    "billed_usd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provisional": {
+      "enum": [
+        "A",
+        "B",
+        "DECLINE",
+        null
+      ]
+    },
+    "disposition": {
+      "enum": [
+        "ACT",
+        "REFER",
+        null
+      ]
+    },
+    "issue": {
+      "enum": [
+        "NONE",
+        "CONTROL",
+        "OTHER",
+        null
+      ]
+    }
+  },
+  "required": [
+    "attempt_id",
+    "stage",
+    "family",
+    "operator_code",
+    "recurrence",
+    "period",
+    "state_before",
+    "model_snapshot",
+    "upstream",
+    "provider_request_id",
+    "inference_config_hash",
+    "design_version",
+    "menu_id",
+    "economic_root",
+    "offer_A",
+    "offer_B",
+    "authorized_clause_sha256",
+    "messages_sha256",
+    "raw_request_path",
+    "raw_response_or_error_path",
+    "raw_response_or_error_sha256",
+    "request_started_utc",
+    "status",
+    "in_tokens",
+    "out_tokens",
+    "billed_usd",
+    "provisional",
+    "disposition",
+    "issue"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "VALID"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "provisional": {
+            "enum": [
+              "A",
+              "B",
+              "DECLINE"
+            ]
+          },
+          "disposition": {
+            "enum": [
+              "ACT",
+              "REFER"
+            ]
+          },
+          "issue": {
+            "enum": [
+              "NONE",
+              "CONTROL",
+              "OTHER"
+            ]
+          }
+        },
+        "oneOf": [
+          {
+            "properties": {
+              "disposition": {
+                "const": "ACT"
+              },
+              "issue": {
+                "const": "NONE"
+              }
+            }
+          },
+          {
+            "properties": {
+              "disposition": {
+                "const": "REFER"
+              },
+              "issue": {
+                "enum": [
+                  "CONTROL",
+                  "OTHER"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "else": {
+        "properties": {
+          "provisional": {
+            "type": "null"
+          },
+          "disposition": {
+            "type": "null"
+          },
+          "issue": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "VALID"
+          },
+          "state_before": {
+            "enum": [
+              "STANDING",
+              "UPFRONT"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "disposition": {
+            "const": "ACT"
+          }
+        }
+      }
+    }
+  ]
+}

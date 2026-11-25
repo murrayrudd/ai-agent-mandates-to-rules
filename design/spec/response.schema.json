@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Purchase decision, before operator review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "provisional",
+    "disposition",
+    "issue"
+  ],
+  "properties": {
+    "provisional": {
+      "enum": [
+        "A",
+        "B",
+        "DECLINE"
+      ]
+    },
+    "disposition": {
+      "enum": [
+        "ACT",
+        "REFER"
+      ]
+    },
+    "issue": {
+      "enum": [
+        "NONE",
+        "CONTROL",
+        "OTHER"
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "disposition": {
+          "const": "ACT"
+        },
+        "issue": {
+          "const": "NONE"
+        }
+      }
+    },
+    {
+      "properties": {
+        "disposition": {
+          "const": "REFER"
+        },
+        "issue": {
+          "enum": [
+            "CONTROL",
+            "OTHER"
+          ]
+        }
+      }
+    }
+  ]
+}

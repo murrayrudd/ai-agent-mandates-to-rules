@@ -1,0 +1,11 @@
+PASS: 486 allowed offers × 2 profiles agree with an independent four-state cash ledger.
+PASS: 6 hand-specified utility fixtures, ties and mirrored choices.
+PASS: response parsing, first eligible fork, single review charge, failure and clause scope.
+PASS: matched monetary twins, private input isolation and disjoint phase allocations.
+pilot: {'families': 2, 'rows': 48, 'unique_pairs': 34}
+precision: {'families': 16, 'rows': 384, 'unique_pairs': 236}
+main: {'families': 128, 'rows': 3072, 'unique_pairs': 1381}
+PASS: 268 core candidate purchase slots, 96 upfront slots, 8 separate qualification calls.
+PASS: main batches end at families 24 and 48 or the frozen target. Resumed schedules exactly match the full schedule.
+PASS: three JSON schemas and 12 valid/invalid synthetic record examples.
+PASS: amendment A1 version, target route and historical price benchmark agree across specifications. All menus, prompts, and prescribed response fixtures match release 1.0.0.

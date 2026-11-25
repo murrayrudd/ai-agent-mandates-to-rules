@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "One period projected onto one economic policy",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "stage": {
+      "enum": [
+        "pilot",
+        "precision",
+        "main"
+      ]
+    },
+    "family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_code": {
+      "enum": [
+        "O1",
+        "O2"
+      ]
+    },
+    "recurrence": {
+      "enum": [
+        "low",
+        "high"
+      ]
+    },
+    "policy": {
+      "enum": [
+        "REVIEW_ALL",
+        "STANDING",
+        "CASE",
+        "RULE",
+        "UPFRONT"
+      ]
+    },
+    "period": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "attempt_id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "fork_attempt_id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "pair_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "offer_A": {
+      "type": "string",
+      "minLength": 1
+    },
+    "offer_B": {
+      "type": "string",
+      "minLength": 1
+    },
+    "executed_label": {
+      "enum": [
+        "A",
+        "B",
+        "DECLINE",
+        "NO_EXECUTION"
+      ]
+    },
+    "executed_physical": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_ruling": {
+      "enum": [
+        "A",
+        "B",
+        "DECLINE",
+        null
+      ]
+    },
+    "qualified_first_referral": {
+      "type": "boolean"
+    },
+    "carry_rule_before": {
+      "type": "boolean"
+    },
+    "carry_rule_after": {
+      "type": "boolean"
+    },
+    "review_count": {
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "later_clause_issued": {
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "provisional_label": {
+      "enum": [
+        "A",
+        "B",
+        "DECLINE",
+        null
+      ]
+    },
+    "best_physical_set": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "provisional_value_100th_c": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "executed_value_100th_c": {
+      "type": "integer"
+    },
+    "best_value_100th_c": {
+      "type": "integer"
+    },
+    "loss_100th_c": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "immediate_recovered_100th_c": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "valid_first_attempt": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    }
+  },
+  "required": [
+    "stage",
+    "family",
+    "operator_code",
+    "recurrence",
+    "policy",
+    "period",
+    "attempt_id",
+    "fork_attempt_id",
+    "pair_id",
+    "offer_A",
+    "offer_B",
+    "executed_label",
+    "executed_physical",
+    "operator_ruling",
+    "qualified_first_referral",
+    "carry_rule_before",
+    "carry_rule_after",
+    "review_count",
+    "later_clause_issued",
+    "provisional_label",
+    "best_physical_set",
+    "provisional_value_100th_c",
+    "executed_value_100th_c",
+    "best_value_100th_c",
+    "loss_100th_c",
+    "immediate_recovered_100th_c",
+    "valid_first_attempt"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "policy": {
+            "const": "REVIEW_ALL"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "attempt_id": {
+            "type": "null"
+          },
+          "review_count": {
+            "const": 1
+          },
+          "loss_100th_c": {
+            "const": 0
+          },
+          "later_clause_issued": {
+            "const": 0
+          },
+          "valid_first_attempt": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "attempt_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "valid_first_attempt": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "executed_label": {
+            "const": "NO_EXECUTION"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "executed_physical": {
+            "const": "NO_EXECUTION"
+          },
+          "executed_value_100th_c": {
+            "const": 0
+          },
+          "review_count": {
+            "const": 0
+          },
+          "later_clause_issued": {
+            "const": 0
+          },
+          "valid_first_attempt": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "later_clause_issued": {
+            "const": 1
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "policy": {
+            "const": "RULE"
+          },
+          "qualified_first_referral": {
+            "const": true
+          },
+          "review_count": {
+            "const": 1
+          },
+          "carry_rule_before": {
+            "const": false
+          },
+          "carry_rule_after": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "policy": {
+            "enum": [
+              "STANDING",
+              "UPFRONT"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "review_count": {
+            "const": 0
+          },
+          "later_clause_issued": {
+            "const": 0
+          }
+        }
+      }
+    }
+  ]
+}

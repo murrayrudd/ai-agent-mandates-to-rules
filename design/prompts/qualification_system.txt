@@ -1,0 +1,1 @@
+Answer one check of the purchasing procedure. Use the supplied setting and rules. Return one JSON object with exactly one string field, answer, containing A, B, or C. Do not explain your choice.

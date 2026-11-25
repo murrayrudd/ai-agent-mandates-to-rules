@@ -1,0 +1,1 @@
+For this purchase, select {display_action}.

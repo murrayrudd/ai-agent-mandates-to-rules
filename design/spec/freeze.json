@@ -1,0 +1,45 @@
+{
+  "release": "1.0.1",
+  "design_date_local": "2026-11-19",
+  "scope": "pre-experiment design and offline instrument checks",
+  "fixed_for_pilot": [
+    "operator utilities and entire monetary ledger",
+    "common general mandate, exact numeric clause, eligible issue and permissions",
+    "public prompt rendering, outcome fallback, case and reusable state transition",
+    "two 12-offer families, high/low replacements, stage separation and display positions",
+    "primary contrasts, scenario parameters, failure definitions, precision rule",
+    "8 qualification questions, pilot slot sheet, proposed call and spend ceilings"
+  ],
+  "empirical_inputs_at_later_checkpoints": {
+    "before_paid_pilot": [
+      "actual availability and resolved identity of specified upstream snapshot",
+      "current quote and approved spending allowance up to the proposed cap",
+      "live adapter verified against the frozen request templates, record schemas and branch fixtures",
+      "collection adapter recovers cleanly from a scripted stop and restart against a durable journal"
+    ],
+    "before_confirmation": [
+      "s independent of main outcomes from the reserved precision phase",
+      "N and ordered main prefix selected under the prespecified rule",
+      "separately agreed collection budget and model availability, and dated configuration and file hashes",
+      "freeze the main run manifest, block boundaries, first-attempt recovery and outcome-masked operational review before dispatch"
+    ]
+  },
+  "calibration_purchase_slot_ceiling": 2144,
+  "main_slot_ceiling_for_balanced_n": "182 × n including upfront comparison; 134 × n core only. These are candidate counts with earliest eligible triggers.",
+  "live_history": "zero qualification, pilot, calibration or main requests in this release",
+  "releases": "A change in the scientific protocol creates an amendment; keep the former release and its evidence. There is no public preregistration claim.",
+  "main_dispatch_revision": "main-blocks-v1",
+  "precollection_amendments": [
+    {
+      "id": "A1",
+      "date_local": "2026-11-19",
+      "supersedes": "1.0.0",
+      "effective_release": "1.0.1",
+      "decision": "The author selected GPT-6.2 Sol as the sole purchasing model before any Paper 3 model requests.",
+      "previous_target": "openai/gpt-6.1-sol-20260929",
+      "selected_target": "openai/gpt-6.2-sol-20261117",
+      "scope": "Qualification, instrumental pilot, precision calibration and main study. Paper 2 receipts use their original model label for budgeting.",
+      "data_at_change": "Zero Paper 3 live requests."
+    }
+  ]
+}

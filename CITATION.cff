@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the working paper and identify the version of the replication materials used."
+type: software
+license: MIT
+title: "From mandates to rules: When is it worth specifying how an AI purchasing agent should decide? Replication materials"
+authors:
+  - family-names: Rudd
+    given-names: Murray A.
+    orcid: "https://orcid.org/0000-0001-9533-5070"
+    affiliation: Futures Insight Research Ltd.
+version: "1.0.0"
+repository-code: "https://github.com/murrayrudd/ai-agent-mandates-to-rules"
+abstract: "Research design, request and response records, analysis code, and figures for a matched choice experiment on delegation, case rulings, reusable rules, and advance specification of purchasing authority."
+keywords:
+  - AI purchasing agents
+  - discrete choice experiments
+  - delegation
+  - decision rights
+  - transaction costs
+preferred-citation:
+  type: unpublished
+  title: "From mandates to rules: When is it worth specifying how an AI purchasing agent should decide?"
+  authors:
+    - family-names: Rudd
+      given-names: Murray A.
+      orcid: "https://orcid.org/0000-0001-9533-5070"
+      affiliation: Futures Insight Research Ltd.
+  year: 2026
+  # Add the SSRN paper DOI here when assigned.

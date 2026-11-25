@@ -1,0 +1,53 @@
+contrast_id,comparison,operator,recurrence,outcome,families,df,mean_family_difference,pooled_within_parity_variance,pooled_within_parity_sd,target_halfwidth,unrounded_required_families,required_families_ceiling
+O1/low/REVIEW_ALL minus STANDING/loss_cents,REVIEW_ALL minus STANDING,O1,low,loss_cents,16,14,-0.22375,0.5193107142857143,0.7206321629553557,2.0,0.5972234387688827,1
+O1/low/REVIEW_ALL minus STANDING/review_count,REVIEW_ALL minus STANDING,O1,low,review_count,16,14,12.0,0.0,0.0,0.5,0.0,0
+O1/low/REVIEW_ALL minus CASE/loss_cents,REVIEW_ALL minus CASE,O1,low,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O1/low/REVIEW_ALL minus CASE/review_count,REVIEW_ALL minus CASE,O1,low,review_count,16,14,11.0,0.0,0.0,0.5,0.0,0
+O1/low/REVIEW_ALL minus RULE/loss_cents,REVIEW_ALL minus RULE,O1,low,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O1/low/REVIEW_ALL minus RULE/review_count,REVIEW_ALL minus RULE,O1,low,review_count,16,14,10.9375,0.0625,0.25,0.5,1.150031036025,2
+O1/low/STANDING minus CASE/loss_cents,STANDING minus CASE,O1,low,loss_cents,16,14,0.22375,0.5193107142857143,0.7206321629553557,2.0,0.5972234387688827,1
+O1/low/STANDING minus CASE/review_count,STANDING minus CASE,O1,low,review_count,16,14,-1.0,0.0,0.0,0.5,0.0,0
+O1/low/STANDING minus RULE/loss_cents,STANDING minus RULE,O1,low,loss_cents,16,14,0.22375,0.5193107142857143,0.7206321629553557,2.0,0.5972234387688827,1
+O1/low/STANDING minus RULE/review_count,STANDING minus RULE,O1,low,review_count,16,14,-1.0625,0.0625,0.25,0.5,1.150031036025,2
+O1/low/CASE minus RULE/loss_cents,CASE minus RULE,O1,low,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O1/low/CASE minus RULE/review_count,CASE minus RULE,O1,low,review_count,16,14,-0.0625,0.0625,0.25,0.5,1.150031036025,2
+O1/high/REVIEW_ALL minus STANDING/loss_cents,REVIEW_ALL minus STANDING,O1,high,loss_cents,16,14,-0.51875,0.988125,0.9940447676035522,2.0,1.136374417472203,2
+O1/high/REVIEW_ALL minus STANDING/review_count,REVIEW_ALL minus STANDING,O1,high,review_count,16,14,12.0,0.0,0.0,0.5,0.0,0
+O1/high/REVIEW_ALL minus CASE/loss_cents,REVIEW_ALL minus CASE,O1,high,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O1/high/REVIEW_ALL minus CASE/review_count,REVIEW_ALL minus CASE,O1,high,review_count,16,14,8.5625,0.6696428571428571,0.8183170883849714,0.5,12.321761100267857,13
+O1/high/REVIEW_ALL minus RULE/loss_cents,REVIEW_ALL minus RULE,O1,high,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O1/high/REVIEW_ALL minus RULE/review_count,REVIEW_ALL minus RULE,O1,high,review_count,16,14,11.0,0.0,0.0,0.5,0.0,0
+O1/high/STANDING minus CASE/loss_cents,STANDING minus CASE,O1,high,loss_cents,16,14,0.51875,0.988125,0.9940447676035522,2.0,1.136374417472203,2
+O1/high/STANDING minus CASE/review_count,STANDING minus CASE,O1,high,review_count,16,14,-3.4375,0.6696428571428571,0.8183170883849714,0.5,12.321761100267857,13
+O1/high/STANDING minus RULE/loss_cents,STANDING minus RULE,O1,high,loss_cents,16,14,0.51875,0.988125,0.9940447676035522,2.0,1.136374417472203,2
+O1/high/STANDING minus RULE/review_count,STANDING minus RULE,O1,high,review_count,16,14,-1.0,0.0,0.0,0.5,0.0,0
+O1/high/CASE minus RULE/loss_cents,CASE minus RULE,O1,high,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O1/high/CASE minus RULE/review_count,CASE minus RULE,O1,high,review_count,16,14,2.4375,0.6696428571428571,0.8183170883849714,0.5,12.321761100267857,13
+O1/high minus low/High minus low difference in CASE minus RULE/loss_cents,High minus low difference in CASE minus RULE,O1,high minus low,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O1/high minus low/High minus low difference in CASE minus RULE/review_count,High minus low difference in CASE minus RULE,O1,high minus low,review_count,16,14,2.5,0.6964285714285714,0.8345229603962802,0.5,12.814631544278571,13
+O2/low/REVIEW_ALL minus STANDING/loss_cents,REVIEW_ALL minus STANDING,O2,low,loss_cents,16,14,-2.625,3.8128571428571427,1.9526538717492004,2.0,4.384904050215321,5
+O2/low/REVIEW_ALL minus STANDING/review_count,REVIEW_ALL minus STANDING,O2,low,review_count,16,14,12.0,0.0,0.0,0.5,0.0,0
+O2/low/REVIEW_ALL minus CASE/loss_cents,REVIEW_ALL minus CASE,O2,low,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O2/low/REVIEW_ALL minus CASE/review_count,REVIEW_ALL minus CASE,O2,low,review_count,16,14,11.0,0.0,0.0,0.5,0.0,0
+O2/low/REVIEW_ALL minus RULE/loss_cents,REVIEW_ALL minus RULE,O2,low,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O2/low/REVIEW_ALL minus RULE/review_count,REVIEW_ALL minus RULE,O2,low,review_count,16,14,10.9375,0.0625,0.25,0.5,1.150031036025,2
+O2/low/STANDING minus CASE/loss_cents,STANDING minus CASE,O2,low,loss_cents,16,14,2.625,3.8128571428571427,1.9526538717492004,2.0,4.384904050215321,5
+O2/low/STANDING minus CASE/review_count,STANDING minus CASE,O2,low,review_count,16,14,-1.0,0.0,0.0,0.5,0.0,0
+O2/low/STANDING minus RULE/loss_cents,STANDING minus RULE,O2,low,loss_cents,16,14,2.625,3.8128571428571427,1.9526538717492004,2.0,4.384904050215321,5
+O2/low/STANDING minus RULE/review_count,STANDING minus RULE,O2,low,review_count,16,14,-1.0625,0.0625,0.25,0.5,1.150031036025,2
+O2/low/CASE minus RULE/loss_cents,CASE minus RULE,O2,low,loss_cents,16,14,0.0,0.0,0.0,2.0,0.0,0
+O2/low/CASE minus RULE/review_count,CASE minus RULE,O2,low,review_count,16,14,-0.0625,0.0625,0.25,0.5,1.150031036025,2
+O2/high/REVIEW_ALL minus STANDING/loss_cents,REVIEW_ALL minus STANDING,O2,high,loss_cents,16,14,-8.18125,14.599910714285715,3.8209829513209965,2.0,16.790350444622497,17
+O2/high/REVIEW_ALL minus STANDING/review_count,REVIEW_ALL minus STANDING,O2,high,review_count,16,14,12.0,0.0,0.0,0.5,0.0,0
+O2/high/REVIEW_ALL minus CASE/loss_cents,REVIEW_ALL minus CASE,O2,high,loss_cents,16,14,-0.6125,1.7148214285714285,1.3095119047077917,2.0,1.9720978640978706,2
+O2/high/REVIEW_ALL minus CASE/review_count,REVIEW_ALL minus CASE,O2,high,review_count,16,14,8.125,0.625,0.7905694150420949,0.5,11.50031036025,12
+O2/high/REVIEW_ALL minus RULE/loss_cents,REVIEW_ALL minus RULE,O2,high,loss_cents,16,14,-0.0625,0.0625,0.25,2.0,0.0718769397515625,1
+O2/high/REVIEW_ALL minus RULE/review_count,REVIEW_ALL minus RULE,O2,high,review_count,16,14,10.9375,0.0625,0.25,0.5,1.150031036025,2
+O2/high/STANDING minus CASE/loss_cents,STANDING minus CASE,O2,high,loss_cents,16,14,7.56875,13.818125,3.717273866693171,2.0,15.891272609672953,16
+O2/high/STANDING minus CASE/review_count,STANDING minus CASE,O2,high,review_count,16,14,-3.875,0.625,0.7905694150420949,0.5,11.50031036025,12
+O2/high/STANDING minus RULE/loss_cents,STANDING minus RULE,O2,high,loss_cents,16,14,8.11875,14.048125,3.748082843268009,2.0,16.155779747958704,17
+O2/high/STANDING minus RULE/review_count,STANDING minus RULE,O2,high,review_count,16,14,-1.0625,0.0625,0.25,0.5,1.150031036025,2
+O2/high/CASE minus RULE/loss_cents,CASE minus RULE,O2,high,loss_cents,16,14,0.55,1.6683928571428572,1.2916628264151822,2.0,1.9187035659967098,2
+O2/high/CASE minus RULE/review_count,CASE minus RULE,O2,high,review_count,16,14,2.8125,0.5625,0.75,0.5,10.350279324225,11
+O2/high minus low/High minus low difference in CASE minus RULE/loss_cents,High minus low difference in CASE minus RULE,O2,high minus low,loss_cents,16,14,0.55,1.6683928571428572,1.2916628264151822,2.0,1.9187035659967098,2
+O2/high minus low/High minus low difference in CASE minus RULE/review_count,High minus low difference in CASE minus RULE,O2,high minus low,review_count,16,14,2.875,0.625,0.7905694150420949,0.5,11.50031036025,12

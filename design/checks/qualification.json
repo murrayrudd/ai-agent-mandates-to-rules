@@ -1,0 +1,82 @@
+[
+  {
+    "id": "Q1",
+    "question": "The service price is 100 cents and the fee is 5.1 cents. What is the purchase debit?",
+    "options": {
+      "A": "105.1 cents",
+      "B": "5.1 cents",
+      "C": "2,105.1 cents"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "Q2",
+    "question": "With 2,500 cents available, a 2,000-cent reserve, and a 105.1-cent purchase debit, what remains uncommitted?",
+    "options": {
+      "A": "2,394.9 cents",
+      "B": "394.9 cents",
+      "C": "500 cents"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "Q3",
+    "question": "A 0.1% probability applies to a permanent loss of 1,000 cents. What is the expected reserve loss?",
+    "options": {
+      "A": "10 cents",
+      "B": "0.1 cent",
+      "C": "1 cent"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "Q4",
+    "question": "The chance of non-delivery is 1%. A guarantee returns 50 cents only after non-delivery. What is the expected reimbursement?",
+    "options": {
+      "A": "0.5 cent",
+      "B": "50 cents",
+      "C": "5 cents"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "Q5",
+    "question": "What is the defined value of declining the purchase?",
+    "options": {
+      "A": "The service value",
+      "B": "Zero",
+      "C": "The unused spending ceiling"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "Q6",
+    "question": "A past ruling selected one offer for one purchase. There is no standing clarification in the current mandate. What carries forward?",
+    "options": {
+      "A": "The previous offer choice",
+      "B": "An inferred numerical threshold",
+      "C": "The instructions in the current mandate"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "Q7",
+    "question": "Under standing authority you decide that declining is best. Which values for provisional, disposition, and issue are valid?",
+    "options": {
+      "A": "DECLINE, ACT, NONE",
+      "B": "DECLINE, REFER, OTHER",
+      "C": "REFER, DECLINE, NONE"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "Q8",
+    "question": "During review the operator selects an action and authorizes a new standing clause. Which instruction governs the triggering purchase?",
+    "options": {
+      "A": "The agent reconsiders it under the new clause",
+      "B": "Execute the operator’s selection; the new clause applies on later purchases",
+      "C": "Execute the agent’s provisional action"
+    },
+    "answer": "B"
+  }
+]
